@@ -135,7 +135,7 @@
   /* ---------- HERO ---------- */
   .hero{
     position: relative;
-    padding: 0 0 70px;
+    padding: 0 0 28px;
     overflow: hidden;
   }
   .hero-inner{
@@ -193,7 +193,7 @@
 
   /* ---------- SECTIONS ---------- */
   section{
-    padding: 64px 0;
+    padding: 36px 0 64px;
   }
   section[data-panel]{ display: none; border-top: 1px solid var(--line); }
   section[data-panel].active{ display: block; }
@@ -343,10 +343,10 @@
 
   @media (max-width: 640px){
     body{ font-size: 16.5px; }
-    .hero{ padding: 60px 0 40px; }
+    .hero{ padding: 40px 0 20px; }
     .hero-banner{ height: 200px; }
     .hero-inner{ padding-top: 32px; }
-    section{ padding: 48px 0; }
+    section{ padding: 28px 0 48px; }
   }
 </style>
 </head>
@@ -361,9 +361,11 @@
       <div class="nav-dropdown">
         <button type="button" role="tab" class="nav-dropdown-trigger" data-target="research">Research</button>
         <div class="nav-dropdown-menu" data-menu-for="research">
-          <button type="button" data-subject="subject-1" class="active">Subject 1</button>
-          <button type="button" data-subject="subject-2">Subject 2</button>
-          <button type="button" data-subject="subject-3">Subject 3</button>
+          <button type="button" data-subject="subject-1" class="active">Fuel Treatment Effectiveness</button>
+          <button type="button" data-subject="subject-2">Spatial Instabilities</button>
+          <button type="button" data-subject="subject-3">Buoyant Flow Instabilities</button>
+          <button type="button" data-subject="subject-4">Topological Data Analysis</button>
+          <button type="button" data-subject="subject-5">Papers and Talks</button>
         </div>
       </div>
 
@@ -384,7 +386,6 @@
   <div class="hero-inner">
     <p class="eyebrow">Applied Mathematics — Wildfire &amp; Fire Behavior Modeling</p>
     <h1>Olivia Chandrasekhar</h1>
-    <p class="lede">.</p>
     <div class="hero-meta">
       <span>Boulder, CO</span>
       <span>Research Scientist, KBR / USGS EROS</span>
@@ -398,8 +399,9 @@
     <h2>About Me</h2>
 
     <div class="about-bio">
-      <p>I study how spatial dynamics affect fire behavior. Currently, my work focuses on understanding fuel treatment effectiveness in the Sierra Nevada and longevity in the Southern Rockies. I'm a research scientist based in Boulder, Colorado, working at the intersection of applied mathematics and wildland fire science. My work develops physics-based and mathematical models of fire behavior — from dynamical-systems accounts of front instability to large-scale, three-dimensional vegetation models used to understand how fuel structure shapes fire spread.</p>
-      <p>Currently, I work with KBR as a contractor to the USGS, on the EROS Wildland Fire and Fuels Research Team, where I build vegetation and fire behavior models and work with remotely sensed fuels data across a range of spatial scales.</p>
+      <p>I'm a research scientist based in Boulder, CO working at the intersection of wildland fire science, geospatial science and applied mathematics. I work with KBR as a contractor to the USGS. My team, the Wildland Fire and Fuels Research Team, is based at the Earth Resources Observations and Science (EROS) Center in Sioux Falls, SD.</p>
+      <p>Broadly, I study how spatial dynamics affect fire behavior. Currently, my work focuses on understanding fuel treatment effectiveness in the Sierra Nevada using QUIC-Fire, a hybrid physics-based model developed by Los Alamos National Laboratory (LANL). As part of this project, I develop three-dimensional vegetation models using a range of remote sensing data. I also work on predictive modeling approaches to study fuel treatment longevity in the Southern Rockies.</p>
+      <p>As a graduate student at UNC-Chapel Hill and a graduate research assistant at LANL, I studied fundamental mathematical models of fire behavior. I was particularly interested in understanding how spatial perturbations affected the stability of fire fronts that behaved like traveling waves. This was the primary subject of my <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=kq-WetUAAAAJ&amp;citation_for_view=kq-WetUAAAAJ:u5HHmVD_uO8C" target="_blank" rel="noopener">graduate thesis</a> and <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=kq-WetUAAAAJ&amp;citation_for_view=kq-WetUAAAAJ:qjMakFHDy7sC" target="_blank" rel="noopener">corresponding publication</a>. I have also studied <a href="#" onclick="activate('research'); selectSubject('research','subject-3'); window.scrollTo({top:0,behavior:'instant'}); return false;">buoyant flow instabilities in fire fronts</a> and applications of <a href="#" onclick="activate('research'); selectSubject('research','subject-4'); window.scrollTo({top:0,behavior:'instant'}); return false;">topological data analysis (TDA)</a> to terrestrial lidar scanning data.</p>
     </div>
 
     <div class="subhead">Education</div>
@@ -448,34 +450,145 @@
 
 <section id="research" data-panel style="display:none">
   <div class="wrap">
-    <h2>Research</h2>
 
     <div id="subject-1" class="subject-panel active">
+      <h2>Fuel Treatment Effectiveness</h2>
       <div class="research-focus">
-        <p>My research sits at the boundary of dynamical systems and wildfire science. I'm interested in when and why fire fronts that look stable on paper break down in practice — how small perturbations in fuel, wind, or terrain grow into the fingering, splitting, and merging patterns seen in real fire perimeters.</p>
-        <p>This spans rigorous mathematical analysis of simplified fire-spread models and applied work with high-fidelity simulation tools like FIRETEC, connecting formal instability results to physically observed fire behavior.</p>
+        <p>My current work focuses on understanding fuel treatment effectiveness in the Sierra Nevada using QUIC-Fire, a hybrid physics-based fire behavior model developed by Los Alamos National Laboratory. As part of this project, I develop three-dimensional vegetation models from a range of remote sensing data sources.</p>
+        <p>I also work on predictive modeling approaches to study fuel treatment longevity in the Southern Rockies.</p>
       </div>
 
       <div class="subhead">Talks &amp; Presentations</div>
 
       <div class="talk-card">
-        <p class="talk-title">Characterizing Instabilities in a Model of Wildland Fire Propagation</p>
-        <p class="talk-meta">SIAM Conference on Nonlinear Waves and Coherent Structures — June 2024</p>
-        <p class="talk-authors">Chandrasekhar, Olivia; Jones, C. K. R. T.; Rodman, Linn; Barker, Blake</p>
-        <p class="talk-note"><em>[ add abstract / slides / video link here ]</em></p>
+        <p class="talk-title">The Effects of Fuel Treatments in the Sierra Nevada: Integrating Remote Sensing Data to Create High-Quality Three-Dimensional Inputs for Fire Behavior Modeling</p>
+        <p class="talk-meta">Fire, Burned Area, and Fuel Load Mapping I, ForestSat 2026 — April 2026</p>
+        <p class="talk-authors">Chandrasekhar, Olivia; Price, Seth; Bonner, Sophie; Mebius, Hazel</p>
       </div>
+
     </div>
 
     <div id="subject-2" class="subject-panel">
-      <div class="placeholder-box">
-        [ subject 2 — add research focus, publications, or talks here ]
+      <h2>Spatial Instabilities in Propagating Fire Fronts</h2>
+      <div class="research-focus">
+        <p>My graduate work sat at the boundary of dynamical systems and wildfire science. My research studied when and why fire fronts that look initially mathematically stable break down due to small spatial perturbations. This mathematical question reflects how small inconsistencies in fuel, wind, or terrain grow into the fingering, splitting, and merging patterns seen in real fire perimeters. This work encompassed rigorous mathematical analysis of simplified fire-spread models and applied work with high-fidelity simulation tools like FIRETEC, connecting formal instability results to physically observed fire behavior.</p>
       </div>
+
+      <div class="subhead">Publications</div>
+
+      <div class="talk-card">
+        <p class="talk-title">The Impact of a Wind Switch on the Stability of Traveling Fronts in a Reaction-Diffusion Model of Fire Propagation</p>
+        <p class="talk-meta">Physica D: Nonlinear Phenomena — 2025</p>
+        <p class="talk-authors">Chandrasekhar, Olivia; Jones, C. K. R. T.; Barker, Blake; Linn, Rodman</p>
+      </div>
+
+      <p class="talk-note"><a href="https://scholar.google.com/citations?user=kq-WetUAAAAJ&amp;hl=en" target="_blank" rel="noopener">View full publication list on Google Scholar &#8594;</a></p>
+
+      <div class="subhead">Talks &amp; Presentations</div>
+
+      <div class="talk-card">
+        <p class="talk-title">Pathways to Spatial Instability in Models of Fire Propagation</p>
+        <p class="talk-meta">Mathematics &amp; Climate Research Network Colloquium — December 2024, virtual</p>
+        <p class="talk-authors">Chandrasekhar, Olivia; Jones, C. K. R. T.; Barker, Blake; Linn, Rodman</p>
+      </div>
+
+      <div class="talk-card">
+        <p class="talk-title">Characterizing Instabilities in a Model of Wildland Fire Propagation</p>
+        <p class="talk-meta">Mini-symposium on Stability of Traveling Waves — Theoretical and Numerical Methods, SIAM Conference on Nonlinear Waves and Coherent Structures — June 2024, Baltimore, MD</p>
+        <p class="talk-authors">Chandrasekhar, Olivia; Jones, C. K. R. T.; Barker, Blake; Linn, Rodman</p>
+      </div>
+
+      <div class="talk-card">
+        <p class="talk-title">Characterizing Instabilities in a Model of Wildland Fire Propagation</p>
+        <p class="talk-meta">Mini-symposium on Advances in Numerical and Statistical Modeling of Wildland Fires, SIAM Conference on the Mathematics of Planet Earth — June 2024, Portland, OR</p>
+        <p class="talk-authors">Chandrasekhar, Olivia; Jones, C. K. R. T.; Barker, Blake; Linn, Rodman</p>
+      </div>
+
+      <div class="talk-card">
+        <p class="talk-title">Two Mechanisms of Pattern Formation in Models of Wildland Fire Propagation</p>
+        <p class="talk-meta">Mini-symposium on Patterns in Earth's Climate System, SIAM Conference on Dynamical Systems — May 2023, Portland, OR</p>
+        <p class="talk-authors">Chandrasekhar, Olivia</p>
+      </div>
+
     </div>
 
     <div id="subject-3" class="subject-panel">
-      <div class="placeholder-box">
-        [ subject 3 — add research focus, publications, or talks here ]
+      <h2>Buoyant Flow Instabilities in Fire Fronts</h2>
+      <div class="research-focus">
+        <p>I also study buoyant flow instabilities in fire fronts — how the upward, buoyancy-driven plume above a fire interacts with and destabilizes the propagating front itself, contributing to the fingering and pulsing patterns seen in real fire behavior.</p>
       </div>
+      <div class="placeholder-box">
+        placeholder for more info
+      </div>
+    </div>
+
+    <div id="subject-4" class="subject-panel">
+      <h2>Topological Data Analysis of Terrestrial Lidar Scanning Data</h2>
+      <div class="research-focus">
+        <p>I'm interested in applications of topological data analysis (TDA) to terrestrial lidar scanning data — using tools from computational topology to extract structural signal (e.g. canopy and fuel-bed geometry) from dense, noisy point-cloud data.</p>
+      </div>
+      <div class="placeholder-box">
+        placeholder for more info
+      </div>
+    </div>
+
+    <div id="subject-5" class="subject-panel">
+      <h2>Papers and Talks</h2>
+
+      <div class="subhead">Publications</div>
+
+      <div class="talk-card">
+        <p class="talk-title">The Impact of a Wind Switch on the Stability of Traveling Fronts in a Reaction-Diffusion Model of Fire Propagation</p>
+        <p class="talk-meta">Physica D: Nonlinear Phenomena — 2025</p>
+        <p class="talk-authors">Chandrasekhar, Olivia; Jones, C. K. R. T.; Barker, Blake; Linn, Rodman</p>
+      </div>
+
+      <div class="talk-card">
+        <p class="talk-title">Z/2Z Invariants of the Free Fermion Algebra</p>
+        <p class="talk-meta">Communications in Algebra — 2018</p>
+        <p class="talk-authors">Chandrasekhar, Olivia; Penn, Michael; Shao, Hanbo</p>
+      </div>
+
+      <p class="talk-note"><a href="https://scholar.google.com/citations?user=kq-WetUAAAAJ&amp;hl=en" target="_blank" rel="noopener">View full publication list on Google Scholar &#8594;</a></p>
+
+      <div class="subhead">Talks &amp; Presentations</div>
+
+      <div class="talk-card">
+        <p class="talk-title">Visualizing 55 Years of Collaboration in Mathematics and Wildland Fire</p>
+        <p class="talk-meta">SIAM Conference on the Mathematics of Planet Earth — July 2026, Cleveland, OH</p>
+        <p class="talk-authors">Chandrasekhar, Olivia</p>
+      </div>
+
+      <div class="talk-card">
+        <p class="talk-title">The Effects of Fuel Treatments in the Sierra Nevada: Integrating Remote Sensing Data to Create High-Quality Three-Dimensional Inputs for Fire Behavior Modeling</p>
+        <p class="talk-meta">Fire, Burned Area, and Fuel Load Mapping I, ForestSat 2026 — April 2026</p>
+        <p class="talk-authors">Chandrasekhar, Olivia; Price, Seth; Bonner, Sophie; Mebius, Hazel</p>
+      </div>
+
+      <div class="talk-card">
+        <p class="talk-title">Pathways to Spatial Instability in Models of Fire Propagation</p>
+        <p class="talk-meta">Mathematics &amp; Climate Research Network Colloquium — December 2024, virtual</p>
+        <p class="talk-authors">Chandrasekhar, Olivia; Jones, C. K. R. T.; Barker, Blake; Linn, Rodman</p>
+      </div>
+
+      <div class="talk-card">
+        <p class="talk-title">Characterizing Instabilities in a Model of Wildland Fire Propagation</p>
+        <p class="talk-meta">Mini-symposium on Stability of Traveling Waves — Theoretical and Numerical Methods, SIAM Conference on Nonlinear Waves and Coherent Structures — June 2024, Baltimore, MD</p>
+        <p class="talk-authors">Chandrasekhar, Olivia; Jones, C. K. R. T.; Barker, Blake; Linn, Rodman</p>
+      </div>
+
+      <div class="talk-card">
+        <p class="talk-title">Characterizing Instabilities in a Model of Wildland Fire Propagation</p>
+        <p class="talk-meta">Mini-symposium on Advances in Numerical and Statistical Modeling of Wildland Fires, SIAM Conference on the Mathematics of Planet Earth — June 2024, Portland, OR</p>
+        <p class="talk-authors">Chandrasekhar, Olivia; Jones, C. K. R. T.; Barker, Blake; Linn, Rodman</p>
+      </div>
+
+      <div class="talk-card">
+        <p class="talk-title">Two Mechanisms of Pattern Formation in Models of Wildland Fire Propagation</p>
+        <p class="talk-meta">Mini-symposium on Patterns in Earth's Climate System, SIAM Conference on Dynamical Systems — May 2023, Portland, OR</p>
+        <p class="talk-authors">Chandrasekhar, Olivia</p>
+      </div>
+
     </div>
   </div>
 </section>
@@ -486,7 +599,7 @@
 
     <div id="personal-landing" class="subject-panel active">
       <div class="placeholder-box">
-        [ this section is a placeholder — add hobbies, interests, photos, or whatever else you'd like here ]
+        placeholder for more info
       </div>
       <p style="margin-top: 20px;">
         <a href="#" class="personal-landing-link" data-subject="trip-report">See trip reports →</a>
@@ -495,7 +608,7 @@
 
     <div id="trip-report" class="subject-panel">
       <div class="placeholder-box">
-        [ trip report placeholder — add photos, itinerary, or notes from a trip here ]
+        placeholder for more info
       </div>
     </div>
   </div>
@@ -508,6 +621,7 @@
       <a href="https://github.com/o-chandra" target="_blank" rel="noopener">github.com/o-chandra</a>
     </div>
     <p class="footer-note">Boulder, CO — Olivia Chandrasekhar</p>
+    <p class="footer-note" style="margin-top: 10px; color: var(--ember);">Disclaimer: this site is new and incomplete!</p>
   </div>
 </footer>
 
@@ -589,5 +703,6 @@
 
   activate('about');
 </script>
+
 </body>
 </html>
